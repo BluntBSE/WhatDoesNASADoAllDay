@@ -1,0 +1,153 @@
+@import "_custom-bootstrap.scss";
+@import "_responsive-md.scss";
+
+/*This is for XS & S Size*/
+body {
+  color: white;
+  font-family: "Arial, Helvetica, sans-serif";
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background-repeat: round;
+}
+a {
+}
+
+.hero {
+  overflow-x: hidden;
+  height: 100vw;
+  max-height: 100vw;
+  background-image: url("../img/astronaut.jpg");
+  width: 100%;
+  object-position: 25% 25%;
+  background-size: cover;
+  background-position: 25% 25%;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: flex-end;
+
+  .hero-text {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+.container {
+}
+
+#img-target {
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 100%;
+  }
+}
+
+.mainWrap {
+  min-height: 100vh;
+  //overflow: hidden;
+  padding-top: 5rem;
+}
+
+.content-card {
+  color: #0b3d91;
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+  }
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.carousel-indicators li {
+  background-color: $primary;
+}
+
+.carousel-inner.carousel-content {
+  font-size: 1rem;
+  border-color: black;
+  border-width: 2px;
+  border: solid;
+}
+
+.carousel-control-next-icon {
+  background-image: none;
+  color: #0b3d91;
+}
+.carousel-control-prev-icon {
+  background-image: none;
+  color: #0b3d91;
+}
+.carousel-inner {
+  display: flex;
+  border: none;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.news-img {
+  img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    //max-height: 10rem;
+  }
+}
+
+.iotd {
+}
+
+.news-desc {
+}
+
+.footer {
+  background-color: #0b3d91;
+  p {
+    margin: unset;
+    display: inline-block;
+  }
+}
+
+/*Stars adapted from https://codepen.io/saransh/pen/BKJun*/
+
+@function multiple-box-shadow($n) {
+  $value: "#{random(6000)}px #{random(6000)}px #FFF";
+  @for $i from 2 through $n {
+    $value: "#{$value} , #{random(6000)}px #{random(6000)}px #FFF";
+  }
+  @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(2400);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow(100);
+
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;
+
+  &:after {
+    content: " ";
+
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+  }
+}

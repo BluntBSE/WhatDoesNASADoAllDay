@@ -1,0 +1,18 @@
+@import "bootstrap/_functions.scss";
+@import "bootstrap/_variables.scss";
+@import "bootstrap/_mixins.scss";
+/*Overwrites go here*/
+$theme-colors: (
+  primary: #0b3d91,
+  secondary: $secondary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark,
+);
+
+$carousel-control-color: #0b3d91;
+
+@import "bootstrap/bootstrap.scss";

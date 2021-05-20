@@ -1,0 +1,19 @@
+{
+  "name": "nasatrack1",
+  "version": "1.0.0",
+  "description": "What is NASA even up to?",
+  "main": "index.html",
+  "scripts": {
+    "test": "test",
+    "dev": "lite-server"
+  },
+  "author": "BluntBSE",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "sass": "^1.32.12"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  }
+}
